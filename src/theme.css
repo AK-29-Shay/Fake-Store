@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --primary-color: #2F80ED;
+  --secondary-color: #27AE60;
+  --success-color: #6FCF97;
+  --danger-color: #EB5757;
+  
+  /* Typography */
+  --text-dark: #2D3436;
+  --text-light: #F5F6FA;
+  
+  /* Spacing */
+  --spacing-unit: 8px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
