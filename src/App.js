@@ -1,4 +1,4 @@
-import './App.css';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Home from './components/Home/Home';
@@ -11,12 +11,20 @@ import CartForm from './components/Carts/CartForm';
 import UserList from './components/Users/UserList';
 import UserForm from './components/Users/UserForm';
 import CustomNavbar from './components/Navbar/CustomNavbar';
+import './App.css';
+import './theme.css'; // Import the theme CSS
 
 function App() {
+  const [theme, setTheme] = useState('original-theme'); // State for the theme
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'original-theme' ? 'cyberpunk-theme' : 'original-theme');
+  };
+
   return (
     <AuthProvider>
       <Router>
-        <div className="d-flex flex-column min-vh-100">
+        <div className={`d-flex flex-column min-vh-100 ${theme}`}> {/* Apply the theme class */}
           <CustomNavbar />
           <div className="container flex-grow-1">
             <Routes>
@@ -53,6 +61,11 @@ function App() {
                     <button className="btn btn-link text-light p-0">Instagram</button>
                   </p>
                 </div>
+                      <div className="col-md-12 text-center mt-3">
+                        <button className="btn btn-outline-light btn-sm" onClick={toggleTheme}>
+                          Toggle Theme
+                        </button>
+                      </div>
               </div>
             </div>
           </footer>
