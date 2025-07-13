@@ -1,24 +1,55 @@
 :root {
+  /* Import a cyberpunk-style font if available */
+  /* @import url('https://fonts.googleapis.com/css2?family=Cyberpunk&display=swap'); */
+
   /* Colors */
-  --primary-color: #2F80ED;
-  --secondary-color: #27AE60;
-  --success-color: #6FCF97;
-  --danger-color: #EB5757;
-  
+  --background-dark: #0A0A1C; /* Deep blue/black */
+  --primary-color: #0F0F2A; /* Darker primary */
+  --secondary-color: #1A0F2A; /* Dark purple */
+  --accent-electric-blue: #00FFFF; /* Electric blue */
+  --accent-hot-pink: #FF00FF; /* Hot pink */
+  --accent-bright-green: #00FF00; /* Bright green */
+  --success-color: #00FF00; /* Bright green for success */
+  --danger-color: #FF0000; /* Red for danger */
+
   /* Typography */
-  --text-dark: #2D3436;
-  --text-light: #F5F6FA;
-  
+  --text-dark: #FFFFFF; /* White or light gray text on dark background */
+  --text-light: #000000; /* Dark text (potentially used on light elements) */
+  --font-family-cyberpunk: 'Cyberpunk', sans-serif; /* Replace 'Cyberpunk' with your chosen font name */
+
   /* Spacing */
   --spacing-unit: 8px;
-  
+
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --shadow-neon-blue: 0 0 10px var(--accent-electric-blue);
+  --shadow-neon-pink: 0 0 10px var(--accent-hot-pink);
+
+  /* Border Radius (can be subtle or sharp) */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-glitchy: 0px; /* Potentially no radius for a glitchy look */
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  font-family: var(--font-family-cyberpunk, sans-serif);
+}
+
+/* Example of applying cyberpunk styles to a button */
+button {
+  background-color: var(--primary-color);
+  color: var(--accent-electric-blue);
+  border: 1px solid var(--accent-hot-pink);
+  box-shadow: var(--shadow-neon-blue);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-neon-pink);
 }
