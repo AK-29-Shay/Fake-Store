@@ -78,6 +78,7 @@ const CartForm = () => {
             onChange={(e) => setCart({...cart, userId: e.target.value})}
             required
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           />
         </div>
         <h4>Products</h4>
@@ -93,6 +94,7 @@ const CartForm = () => {
                   onChange={(e) => handleProductChange(index, 'productId', e.target.value)}
                   required
                   disabled={isLoading}
+                  style={{ borderRadius: 'var(--radius-md)' }}
                 />
               </div>
               <div className="col">
@@ -104,6 +106,7 @@ const CartForm = () => {
                   onChange={(e) => handleProductChange(index, 'quantity', e.target.value)}
                   required
                   disabled={isLoading}
+                  style={{ borderRadius: 'var(--radius-md)' }}
                 />
               </div>
             </div>
@@ -114,11 +117,14 @@ const CartForm = () => {
           className="btn btn-secondary mb-3"
           onClick={addProduct}
           disabled={isLoading}
+          style={{ borderRadius: 'var(--radius-md)' }}
         >
           Add Product
         </button>
         <br />
-        <button type="submit" className="btn btn-primary" disabled={isLoading}>
+        <button type="submit" className="btn btn-primary" disabled={isLoading}
+        style={{ borderRadius: 'var(--radius-md)' }}
+        >
           {isLoading ? 'Saving...' : 'Save'}
         </button>
       </form>

@@ -68,6 +68,7 @@ const ProductForm = () => {
             onChange={(e) => setProduct({...product, title: e.target.value})}
             required
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           />
         </div>
         <div className="mb-3">
@@ -80,6 +81,7 @@ const ProductForm = () => {
             required
             step="0.01"
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           />
         </div>
         <div className="mb-3">
@@ -90,6 +92,7 @@ const ProductForm = () => {
             onChange={(e) => setProduct({...product, description: e.target.value})}
             required
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           />
         </div>
         <div className="mb-3">
@@ -101,6 +104,7 @@ const ProductForm = () => {
             onChange={(e) => setProduct({...product, image: e.target.value})}
             required
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           />
         </div>
         <div className="mb-3">
@@ -111,6 +115,7 @@ const ProductForm = () => {
             onChange={(e) => setProduct({...product, category: e.target.value})}
             required
             disabled={isLoading}
+            style={{ borderRadius: 'var(--radius-md)' }}
           >
             <option value="electronics">Electronics</option>
             <option value="jewelery">Jewelery</option>
@@ -118,7 +123,9 @@ const ProductForm = () => {
             <option value="women's clothing">Women's Clothing</option>
           </select>
         </div>
-        <button type="submit" className="btn btn-primary" disabled={isLoading}>
+        <button type="submit" className="btn btn-primary" disabled={isLoading}
+        style={{ borderRadius: 'var(--radius-md)' }}
+        >
           {isLoading ? 'Saving...' : 'Save'}
         </button>
       </form>

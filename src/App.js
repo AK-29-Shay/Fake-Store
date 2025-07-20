@@ -17,7 +17,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="d-flex flex-column min-vh-100">
-          <CustomNavbar />
+          <CustomNavbar style={{ borderRadius: 'var(--radius-md)' }}/>
           <div className="container flex-grow-1">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -34,7 +34,7 @@ function App() {
               <Route path="/users/:id" element={<UserForm />} />
             </Routes>
           </div>
-          <footer className="bg-dark text-light py-3 mt-auto">
+          <footer className="bg-dark text-light py-3 mt-auto" style={{ borderRadius: 'var(--radius-md)' }}>
             <div className="container">
               <div className="row">
                 <div className="col-md-4">
