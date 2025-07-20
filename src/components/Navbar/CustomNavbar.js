@@ -7,7 +7,7 @@ const CustomNavbar = () => {
   const { token, logout } = useAuth();
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4" style={{ borderRadius: '10px' }}>
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img src={Logo} alt="Fake Store Logo" className="me-2" style={{ height: '30px' }} />
